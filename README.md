@@ -1,4 +1,4 @@
-# WorganicTabV2024 / v1 - Create project
+# WorganicTabV2024 / v2 - Routing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
 
@@ -20,63 +20,58 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 > cd .\worganic-tab-v2024\
 > ng serve
 
+## Git
+git branch : WorganicTabV2024-v2-routing
+
 ## Project :
-- Installation project
-        ~ D:\project\v1\
-        ~ ng new worganic-tab-v2024
-            / Would you like to add Angular routing? (y/N) 
-                -> N
-            / Which stylesheet format would you like to use?
-                -> SCSS
+- Création de la nouvelle branche
+    $ git checkout -b "WorganicTabV2024-v2-routing"
+       
+- Création de repertoire du project component :
+    src/app... :
+        /component
+- Création des components :
+    ~ ng g c component/home --skip-import   
+    ~ ng g c component/abouts --skip-import   
+    ~ ng g c component/design --skip-import
+    ~ ng g c component/404 --skip-import   
+    ~ ng g c component/Pagenotfound --skip-import   
 
-- Passage au projet en mode standalone :
-        -> Modification main.ts
-            \src\main.ts
-                >> const routes: Routes = [
-        -> Suppression app.module.ts
-        -> Modification app.component.ts
-            \src\app\app.component.ts
-            Ajout du mode Standalone :
-                >> @Component({...
-                standalone: true
-                ...
-        -> Suppresion code app.component.html
-            \src\app\app.component.html
-        -> On le remplace par le code :
-                >> <div>Page app.component</div>
-        -> On ajoute <app-root></app-root> (app.component.ts : selector: 'app-root',)
-            \src\app\app.component.ts 
+- Modification des components pour les passer en mode Standalone.
+    >> @Component --> standalone: true
+- Ajout router dans le component app
+    app.component.html -><router-outlet></router-outlet>
+    app.component.ts -> @Component --> imports: [RouterOutlet, RouterLink]
+- Modification du routing main.ts pour inclure home, design, abouts et Pagenotfound
+- Lancement du projet :
+    ~ ng server
 
-    - Lancement du project :
-        > ng serve
-    "La V1 est ok"
+- GitHub : 
+    git add .
+    git commit -m "WorganicTabV2024-v2-routing - v0"
+    git push --set-upstream origin WorganicTabV2024-v2-routing
 
-- github : (sauvegarde du projet)
-    Création du projet WorganicTabV2024
-    -> https://github.com/worganic/WorganicTabV2024
-    Mise en place de la première version
-    PS D:\worganic-tab-v2024> git init
-    PS D:\worganic-tab-v2024> git add .
-    PS D:\worganic-tab-v2024> git commit -m "first commit"
-    PS D:\worganic-tab-v2024> git branch -M main
-    PS D:\worganic-tab-v2024> git remote add origin https://github.com/worganic/WorganicTabV2024.git
-    PS D:\worganic-tab-v2024> git push -u origin main
+
+## Infos plus :
+Nous avons maintenant :
+    index.html -> app.component (avec le menu) ->
+        -> home (page  simple affiché par default et aucune url spécifique appelé)
+        -> design (page simple - http://localhost:4200/design)
+        -> abouts (page simple - http://localhost:4200/abouts)
+        -> Pagenotfound (si l'url n'est pas reconnus par le routing)
 
 ## Historique :
-Après -> v2 -> Mise en place du routing et de la structure du projet.
+Avant -> V1 -> Installation project 
+........
+Après -> v3 -> Mise en place de la structure des pages.
 
 ## Ressource :
-    - Standalone :
-    https://angular.io/guide/standalone-components
-    - Tuto vidéo :
-    https://www.youtube.com/watch?v=prnu9xVnZyU&t=3209s
+- Page not found :
+    https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/
 
 ## Abouts
 created by Johann Loreau
-create at 2024/01/20
+create at 2024/01/20 15h30
 Le project évolura suivant les remarques et conseils des visiteurs.
 
 ## Divers
-Cette version est la seconde,
-elle va reprendre une très très grosse partie de la permière version dispo sur gitLab, mais avec plus d'infos et de détails.
-Une seule version gitlab sera dispo avec plusieurs branche afin de pourvoir amélioré le projet plus facilement.

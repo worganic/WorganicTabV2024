@@ -18,8 +18,26 @@ const routes: Routes = [
   },
   {
       path: '',
-      loadComponent: () => import("./app/app.component").then(module => module.AppComponent)
+      loadComponent: () => import("./app/component/home/home.component").then(module => module.HomeComponent)
   },
+  {
+      path: 'design',
+      loadComponent: () => import("./app/component/design/design.component").then(module => module.DesignComponent)
+  },
+  {
+      path: 'abouts',
+      loadComponent: () => import("./app/component/abouts/abouts.component").then(module => module.AboutsComponent)
+  },
+  {
+      path: '**',
+      loadComponent: () => import("./app/component/pagenotfound/pagenotfound.component").then(module => module.PagenotfoundComponent)
+  },
+ 
+ 
+
+
+
+  
 ];
 
 // DELETE platformBrowserDynamic().bootstrapModule(AppModule)
