@@ -51,6 +51,17 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
         > ng serve
     "La V1 est ok"
 
+- github : (sauvegarde du projet)
+    Création du projet WorganicTabV2024
+    -> https://github.com/worganic/WorganicTabV2024
+    Mise en place de la première version
+    PS D:\worganic-tab-v2024> git init
+    PS D:\worganic-tab-v2024> git add .
+    PS D:\worganic-tab-v2024> git commit -m "first commit"
+    PS D:\worganic-tab-v2024> git branch -M main
+    PS D:\worganic-tab-v2024> git remote add origin https://github.com/worganic/WorganicTabV2024.git
+    PS D:\worganic-tab-v2024> git push -u origin main
+
 ## Historique :
 Après -> v2 -> Mise en place du routing et de la structure du projet.
 
