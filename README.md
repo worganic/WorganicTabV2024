@@ -46,6 +46,12 @@ git branch : WorganicTabV2024-v2-routing
 - Lancement du projet :
     ~ ng server
 
+- GitHub : 
+    git add .
+    git commit -m "WorganicTabV2024-v2-routing - v0"
+    git push --set-upstream origin WorganicTabV2024-v2-routing
+
+
 ## Infos plus :
 Nous avons maintenant :
     index.html -> app.component (avec le menu) ->
